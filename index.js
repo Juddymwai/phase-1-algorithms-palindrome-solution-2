@@ -1,29 +1,31 @@
 function isPalindrome(word) {
   // Write your algorithm here
-  let lowerCaseWord = word.toLowerCase()
-  let reversedWord = word.split('').reverse().join('')
-  return  lowerCaseWord === reversedWord
-  
+  for ( let input=0; input< word.length /2; input++){
+    const o = word.length -1 - input;
+    if (word[input] !== word[o]) {
+      
+      return false;
+  }
+  return true;
   
 }
-console.log(isPalindrome('racecar'))
-console.log(isPalindrome('mom'))
-console.log(isPalindrome('run'))
+}
+
 
 /* 
   Add your pseudocode here
 */
-// convert the input string to lower case
-// also the input string should be reversed
-// compare the two variable
-// return the result of the comparison
+ // To iterate from the beginning of the string to the middle of the string
+//  compare the letters that are being ilitereted
+//  if the letters are matching return true
+//  if the letters are not matching return false
 
 /*
   Add written explanation of your solution here
-  inside the function isPalindrome,the first step is to define the varable that will be assigned to the lower case input
-  the second step will be to define the second variavle that hold the reversed input.
-  afterwards the function is going to return the result of comparing the two variable using strict equality assignment.
-  the function will return true is the condition is met and false if the condition is not met
+  inside the function isPalindrome,i will interate the input string staring from begining to the middle of the string. 
+  i will then define another variable and use it to compare the letters am iterating to the corresponding letter at the end of the string
+  the functions should return true id the comparison is met and false if the condition was not met
+
 */
 
 // You can run `node index.js` to view these console logs
