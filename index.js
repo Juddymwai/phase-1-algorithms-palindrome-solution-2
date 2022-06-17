@@ -5,6 +5,7 @@ function isPalindrome(word) {
     if (word[input] !== word[o]) {
       
       return false;
+      
   }
   return true;
   
